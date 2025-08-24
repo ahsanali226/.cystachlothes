@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleek Threads</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <img src="logo.png.jpeg" alt="Logo" class="logo">
+        <nav>
+            <a href="men.html">Men</a>
+            <a href="women.html">Women</a>
+            <a href="#" class="cart-icon" id="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        <section class="category-section">
+            <a href="men.html" class="category-link">
+                <div class="category-card">
+                    <img src="Screenshot 2025-08-23 161754.png" alt="Men's Fashion">
+                    <div class="category-overlay">
+                        <h2>Men's Collection</h2>
+                    </div>
+                </div>
+            </a>
+            <a href="women.html" class="category-link">
+                <div class="category-card">
+                    <img src="product14.png.jpeg" alt="Women's Fashion">
+                    <div class="category-overlay">
+                        <h2>Women's Collection</h2>
+                    </div>
+                </div>
+            </a>
+        </section>
+    </main>
+    <footer>
+
+        <p>created by ahsanali</p>
+    </footer>
+
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-btn" id="close-cart-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-summary">
+            <p>Total: <span id="cart-total">$0.00</span></p>
+            <button class="checkout-btn" id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Sleek Threads</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <img src="logo.png.jpeg" alt="Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="men.html">Men</a>
+            <a href="women.html">Women</a>
+            <a href="#" class="cart-icon" id="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+        </nav>
+    </header>
+
+    <main class="cart-page-container">
+        <h1>Your Cart</h1>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-summary">
+            <p>Total: <span id="cart-total">$0.00</span></p>
+        </div>
+
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+            <label for="address">Address:</label>
+            <textarea id="address" required></textarea>
+            <button type="submit">Complete Purchase</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
