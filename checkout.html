@@ -25,21 +25,47 @@
             <div class="checkout-form-section">
                 <h1>Checkout</h1>
               <!-- modify this form HTML and place wherever you want your form -->
- <form id="checkout-form" class="checkout-form"
-  action="https://formspree.io/f/xdklnlrl"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+<form id="checkout-form" class="checkout-form" action="https://formspree.io/f/xdklnlrl" method="POST">
+    <label>
+        Your Name:
+        <input type="text" name="name" required>
+    </label>
+    <label>
+        Your Email:
+        <input type="email" name="email" required>
+    </label>
+    <label>
+        Address:
+        <input type="text" name="address" required>
+    </label>
+    <label>
+        City:
+        <input type="text" name="city" required>
+    </label>
+    <label>
+        State:
+        <input type="text" name="state" required>
+    </label>
+    <label>
+        Zip Code:
+        <input type="text" name="zip" required>
+    </label>
+    <label>
+        Phone Number:
+        <input type="tel" name="phone" required>
+    </label>
+    <fieldset class="payment-options">
+        <legend>Payment Method:</legend>
+        <label class="payment-option">
+            <input type="radio" name="payment" value="credit" required> Credit Card
+        </label>
+        <label class="payment-option">
+            <input type="radio" name="payment" value="paypal" required> PayPal
+        </label>
+    </fieldset>
+    <button type="submit" class="place-order-btn">Place Order</button>
 </form>
+
             </div>
             <div class="order-summary-section">
                 <h2>Order Summary</h2>
@@ -62,6 +88,5 @@
 
     <div class="overlay" id="overlay"></div>
 
-
+  
 </body>
-</html>
