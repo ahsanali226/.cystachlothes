@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${product.image.endsWith('.mp4') ? videoToImage(product.image) : product.image}" alt="${product.name}">
                     <div class="product-info">
                         <h3>${product.name}</h3>
-                        <p class="price">$${product.price.toFixed(2)}</p>
+                        <p class="price">₨${(product.price * 280).toFixed(2)}</p>
                     </div>
                 </a>
             `;
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="details-content">
                 <h1>${product.name}</h1>
-                <p class="price">$${product.price.toFixed(2)}</p>
+                <p class="price">₨${(product.price * 280).toFixed(2)}</p>
                 <p>${product.description}</p>
                 <div class="add-to-cart-section">
                     <button class="add-btn" data-id="${product.id}">Add to Cart</button>
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="${item.image.endsWith('.mp4') ? videoToImage(item.image) : item.image}" alt="${item.name}">
                 <div class="item-details">
                     <h4>${item.name}</h4>
-                    <p class="price">$${item.price.toFixed(2)}</p>
+<p class="price">₨${(item.price * 280).toFixed(2)}</p>
                     <div class="quantity-control">
                         <button class="quantity-btn minus" data-id="${item.id}">-</button>
                         <span class="quantity">${item.quantity}</span>
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
             itemCount += item.quantity;
         });
 
-        cartTotalElement.textContent = `$${total.toFixed(2)}`;
+        cartTotalElement.textContent = `₨${(total * 280).toFixed(2)}`;
         cartCountElement.textContent = itemCount;
         localStorage.setItem('cart', JSON.stringify(cart));
     };
@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p>Quantity: ${item.quantity}</p>
                 </div>
                 <div class="order-item-price">
-                    $${itemTotal.toFixed(2)}
+                    ₨${(itemTotal * 280).toFixed(2)}
                 </div>
             `;
             orderSummaryContainer.appendChild(orderItem);
@@ -349,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <hr>
             <div class="total-row">
                 <strong>Total:</strong>
-                <strong>$${total.toFixed(2)}</strong>
+                <strong>₨${(total * 280).toFixed(2)}</strong>
             </div>
         `;
         orderSummaryContainer.appendChild(totalElement);
@@ -411,10 +411,10 @@ document.addEventListener('DOMContentLoaded', () => {
             
             Order Details:
             ${order.items.map(item => `
-                - ${item.name} x${item.quantity}: $${(item.price * item.quantity).toFixed(2)}
+- ${item.name} x${item.quantity}: ₨${(item.price * item.quantity * 280).toFixed(2)}
             `).join('')}
             
-            Total: $${order.total.toFixed(2)}
+            Total: ₨${(order.total * 280).toFixed(2)}
             Payment Method: ${order.paymentMethod.toUpperCase()}
             
             Shipping Address:
