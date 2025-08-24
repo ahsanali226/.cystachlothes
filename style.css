@@ -517,19 +517,14 @@ nav a:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
+.checkout-form label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     font-weight: 600;
     color: var(--text-color);
 }
 
-.form-group input,
-.form-group textarea {
+.checkout-form input {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid var(--border-color);
@@ -537,12 +532,28 @@ nav a:hover {
     color: var(--text-color);
     border-radius: 5px;
     font-family: inherit;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.checkout-form input:focus {
     outline: none;
     border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.2);
+}
+
+.checkout-form fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #2a2a2a;
+}
+
+.checkout-form legend {
+    font-weight: 600;
+    color: var(--accent-color);
+    padding: 0 1rem;
 }
 
 .payment-options {
@@ -559,33 +570,48 @@ nav a:hover {
     border: 1px solid var(--border-color);
     border-radius: 5px;
     cursor: pointer;
-    transition: border-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 .payment-option:hover {
     border-color: var(--accent-color);
+    background-color: #333;
 }
 
 .payment-option input[type="radio"] {
     margin-right: 1rem;
+    accent-color: var(--accent-color);
 }
 
 .place-order-btn {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--accent-color);
-    color: var(--bg-color);
+    width: 300px;
+    height: 60px;
+    background: #ff6b35;
+    color: #ffffff;
     border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: 600;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 1rem;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .place-order-btn:hover {
-    background-color: var(--hover-gold);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.6);
+    background: #ff8535;
+}
+
+.place-order-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
 }
 
 .order-summary-section {
