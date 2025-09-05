@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Sleek Threads</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <img src="logo.png.jpeg" alt="Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="men.html">Men</a>
+            <a href="women.html">Women</a>
+        </nav>
+    </header>
+
+    <div class="admin-container">
+        <div class="admin-sidebar">
+            <h3>Admin Panel</h3>
+            <a href="admin-analytics.html">data analytics</a>
+            <a href="admin-orders.html">order</a>
+            <a href="admin-order-loss-gain.html">loss/gain</a>
+            <a href="admin-products.html">products</a>
+            <a href="admin-user-management.html">managment</a>
+            <a href="admin-dashboard.html">dashbroad</a>
+            <a href="admin-settings.html">setting</a>
+        
+        </div>
+        
+        <div class="admin-content">
+            <div class="admin-section active">
+                <h1>Dashboard</h1>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Products</h3>
+                        <p id="total-products">20</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Orders</h3>
+                        <p id="total-orders">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Revenue</h3>
+                        <p id="total-revenue">₨0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Low Stock Items</h3>
+                        <p id="low-stock">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
